@@ -1,59 +1,36 @@
-const bouton = document.getElementById("btn");
-let word = document.getElementById("theWord");
-const theDef = document.getElementById("def");
-const theSyn = document.getElementById("syn")
+// console.log('test1')
 
-function displayDefinition() {
-    theDef.style.display = "flex"
-    theDef.style.padding = "20px"
-    displayWord();
-}
+// chrome.runtime.onConnect.addListener(function (port) {
+//     console.log('test')
+//     if (port.name === "DicoWords") {
 
-function displayBtn() {
-    word = document.getElementById("theWord").value
-    bouton.style.display = "flex";
+//         // Extension is fully loaded
+//         chrome.runtime.executeScript({
+//             code: "window.getSelection().toString();"
+//         }, function (selection) {
+//             if (selection && selection.length > 0) {
+//                 var selectedText = selection[0];
+//                 // Use the selectedText to fetch the definition
 
-}
+//                 fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + selectedText)
+//                     .then(data => data.json())
 
-function displayWord() {
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-        .then(data => data.json())
-        .then(data => theDef.innerHTML = data[0].meanings[0].definitions[0].definition)
-}
+//                     .then(data => console.log(data))
 
-function fetchSyn() {
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-        .then(data => data.json())
-        .then(data => displaySyn(data))
-}
+//             }
+//         });
+//     }
+// });
 
-function displaySyn(result) {
-    let lengthOfSynonyms = result[0].meanings[0].synonyms.length
-    theSyn.innerHTML = " "
-    if (lengthOfSynonyms === 0) {
-        theSyn.innerHTML = "Sorry, there is no synonym..."
-    } else {
-        for (i = 0; i < lengthOfSynonyms; i++) {
-            if (result[0].meanings[0].synonyms[i] !== "") {
-                theSyn.innerHTML += `<li>${result[0].meanings[0].synonyms[i]}</li>` + "<br>"
-            } else {
-                theSyn.innerHTML = "Sorry, there is no synonym..."
-            }
-        }
-    }
-}
+// Listen for a user to click on a word
+// document.addEventListener('mouseup', function (event) {
+//     var selectedText = window.getSelection().toString();
+//     if (selectedText.length > 0) {
+//         chrome.runtime.sendMessage({
+//             type: "wordSelected",
+//             selectedText: selectedText
+//         });
+//     }
+// });
 
-function displaySynonyms() {
-    theSyn.style.display = "flex"
-    theSyn.style.padding = "20px"
-    fetchSyn()
-}
 
-const send = document.getElementById("valid");
-send.addEventListener("click", displayBtn);
-
-const defDescription = document.getElementById('defBtn');
-defDescription.addEventListener("click", displayDefinition);
-
-const synDescription = document.getElementById('synBtn');
-synDescription.addEventListener("click", displaySynonyms);

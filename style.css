@@ -1,52 +1,79 @@
-body{
-    margin: 5;
-    background-color: #FBF9E2;
-    padding: 20px 10px;
-    width: 250px;
-    height: 100px;
+body {
+  margin: 3;
+  margin-top: 1px;
+  background-color: #FBF9E2;
+  padding: 20px 10px;
+  width: 250px;
+  height: 100px;
+  cursor: pointer;
+}
+
+#date {
+  border: none;
+  border-radius: 20px;
+  background-color: #ADA7B8;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+#time,
+#day {
+  margin: 0;
+  margin-bottom: 5px;
+  size: 50px;
+  height: 100%;
+  font-size: 15px;
 }
 
 h1 {
-    margin: 0;
-    color: #957DAD;
-    text-align: center;
-    font-family: Optima, sans-serif;
-    font-size:x-large;
+  margin: 0;
+  color: #957DAD;
+  text-align: center;
+  font-family: Optima, sans-serif;
+  font-size: x-large;
+}
+
+section {
+  padding: 15px;
 }
 
 #title p {
-    margin-bottom: 15px;
-    color:#AEA7D1;;
-    text-align: center;
+  margin-bottom: 15px;
+  color: #AEA7D1;
+  ;
+  text-align: center;
 }
 
-#form{
-    display: flex;
-    margin-bottom: 5%;
+#form {
+  display: flex;
+  margin-bottom: 10%;
 }
 
-.word{
-    border-radius: 20px;
-    border: solid 1px #957DAD;
-    border-radius: 20px;
+.word {
+  border-radius: 20px;
+  border: solid 1px #957DAD;
+  border-radius: 20px;
 }
 
-#valid{
-    cursor:pointer;
-    color: #957DAD;
-    border-radius: 20px;
+#valid {
+  cursor: pointer;
+  color: #957DAD;
+  border-radius: 20px;
 }
 
-#btn{
-    /* height: 70px; */
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 15px;
+#btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 15px;
 }
 
-#btn button h2{
-    margin: 0;
+#input {
+  margin-bottom: 5px;
+}
+
+#btn button h2 {
+  margin: 0;
 }
 
 .button-77 {
@@ -58,7 +85,7 @@ h1 {
   cursor: pointer;
   display: inline-block;
   flex-direction: row;
-  font-family: Eina01,sans-serif;
+  font-family: Eina01, sans-serif;
   font-size: 10px;
   font-weight: 800;
   justify-content: center;
@@ -131,12 +158,12 @@ h1 {
 
 #def {
   display: flex;
-  /* font-family: Impact; */
-}
-
-#syn{
-  display: flex;
   flex-direction: column;
   margin: 5px 20px;
 }
 
+#syn {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 20px;
+}

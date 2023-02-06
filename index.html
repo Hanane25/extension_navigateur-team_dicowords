@@ -11,15 +11,20 @@
 
 <body>
     <section>
+        <div id="date">
+            <div id="day"></div>
+            <div id="time"></div>
+        </div>
         <div id="title">
             <h1>DicoWords</h1>
             <p>Choose a word to have the definition or a synonym</p>
+
         </div>
 
         <div id="input">
             <form id="form">
                 <input id="theWord" class="word" type="text" placeholder="write your word" />
-                <button role="button" type="button" id="valid" class="word">Send</button>
+                <button role="button" type="button" id="valid" class="word" accesskey="enter">Send</button>
             </form>
         </div>
 
@@ -29,7 +34,9 @@
                     <h2>Definition</h2>
                 </button>
                 <div class="answers">
-                    <p id="def"></p>
+                    <ul id="def">
+
+                    </ul>
                 </div>
             </div>
             <div class="space" id="synonyms">
@@ -38,15 +45,22 @@
                 </button>
                 <div class="answers">
                     <ul id="syn">
-                        
+
                     </ul>
 
                 </div>
             </div>
+            <div id="image">
+
+            </div>
         </div>
 
+        <!-- <div id="def_result">
+
+        </div> -->
+
     </section>
-    <script src="./background.js"></script>
+    <script src="./content.js"></script>
 </body>
 
 </html>
