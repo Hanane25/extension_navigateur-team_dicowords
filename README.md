@@ -1,4 +1,4 @@
-# extension_navigateur-team_dicowords
+# Extension_navigateur_Dicowords
 
 Projet réalisé en équipe de 3 personnes, d'une durée de 2 semaines.
 
